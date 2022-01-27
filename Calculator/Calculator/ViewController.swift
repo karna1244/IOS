@@ -17,24 +17,34 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultLBL: UILabel!
     
+    var operandOne = 0.0
+    var operandTw0 = 0.0
+    var operation = ""
+    
     @IBAction func eight(_ sender: UIButton) {
         self.resultLBL.text! += "8"
-        if OperandOne == 0.0{
+        if operandOne == 0.0{
             self.operandOne = 8
+        }
+        else{
+            self.operandTw0=8
+        }
+    
+    }
+    @IBAction func nine(_ sender: UIButton) {
+        
+        self.resultLBL.text! += "8"
+        if operandOne == 0.0{
+            self.operandOne = 9
         }
         else
         {
-            Self.operandOne=8
+            self.operandOne=9
+            
         }
-        
-        
-        }
-        self.resultLBL.text!=sender.titleLabel
-    }
-    @IBAction func nine(_ sender: UIButton) {
-    }
     @IBAction func equal(_ sender: UIButton) {
     }
     
-}
 
+}
+}
