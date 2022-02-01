@@ -42,9 +42,38 @@ class ViewController: UIViewController {
             self.operandOne=9
             
         }
-    @IBAction func equal(_ sender: UIButton) {
+        @IBAction func add(_ sender: UIButton) {
+            self.resultLBL.text! += "+"
+            self.operation = "+"
+        }
+
+        @IBAction func Equals(_ sender: UIButton) {
+            if self.operation  == "+"
+            {
+                self.resultLBL.text = "\(operandOne + operandTwo)"
+            }
+            
+            
+            
+    @IBAction func Clear(_ sender: UIButton) {
+        
+        self.operandOne = 0.0
+        self.operandTw0 = 0.0
+        self.operation = ""
+        self.resultLBL.txt = ""
     }
     
 
 }
+    }
+    @IBAction func SquareRoot(_ sender: UIButton) {
+        
+        if let value = self.resultLBL.text {
+            
+            if let doubleVal = Double(value){
+                
+                self.resultLBL.text=String(format: "2f",arguments:[doubleVal.squareRoot()])
+            }
+        }
+    }
 }

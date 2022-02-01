@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,17 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcc-DX-QHY">
-                                <rect key="frame" x="59" y="421" width="297.5" height="31"/>
+                                <rect key="frame" x="69" y="421" width="297.5" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDS-ch-vme">
                                         <rect key="frame" x="0.0" y="0.0" width="59.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="8" cornerStyle="large" titleAlignment="center">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="strokeColor" systemColor="systemPinkColor"/>
-                                            </backgroundConfiguration>
+                                            <backgroundConfiguration key="background"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.3729031814110082" green="0.90829163789749146" blue="0.66787125695105287" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="eight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FrH-3C-qvq"/>
@@ -38,16 +35,18 @@
                                         <buttonConfiguration key="configuration" style="plain" title="+" cornerStyle="large" titleAlignment="center">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7I-kQ-znJ"/>
+                                            <action selector="nine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bzn-ck-PkL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e93-c3-uwv">
                                         <rect key="frame" x="119" y="0.0" width="59.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="8" cornerStyle="large" titleAlignment="center">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="strokeColor" systemColor="systemPinkColor"/>
-                                            </backgroundConfiguration>
+                                            <backgroundConfiguration key="background"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.36553794444957066" green="0.90829163789749146" blue="0.37182705635887481" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="eight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v8d-6M-hac"/>
@@ -62,6 +61,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="equal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bl7-Mv-XVK"/>
+                                            <action selector="nine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u4E-R0-tyW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpB-9Y-Pkn">
@@ -77,15 +77,39 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgn-XH-7QA">
+                                <rect key="frame" x="117" y="527" width="181" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="🆑" cornerStyle="large" titleAlignment="center">
+                                    <backgroundConfiguration key="background"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.37290318140000001" green="0.9082916379" blue="0.66787125700000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqO-Ob-UUM">
+                                <rect key="frame" x="117" y="476" width="181" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="√" cornerStyle="large" titleAlignment="center">
+                                    <backgroundConfiguration key="background"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.37290318140000001" green="0.9082916379" blue="0.66787125700000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="SquareRoot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MjF-0X-XBa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.88580970205627119" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zcc-DX-QHY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FEx-A2-6lT"/>
                             <constraint firstItem="zcc-DX-QHY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jXl-p0-a5h"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Equals" destination="TXN-Od-osT" id="tal-JO-qDq"/>
                         <outlet property="resultLBL" destination="LpB-9Y-Pkn" id="H6G-3Z-Wjd"/>
                     </connections>
                 </viewController>
@@ -94,12 +118,4 @@
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
